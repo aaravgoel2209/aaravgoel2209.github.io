@@ -1,0 +1,140 @@
+:root {
+  --bg: #f9f9f9;
+  --text: #111;
+  --accent: #0077ff;
+  --card: #fff;
+}
+
+[data-theme="dark"] {
+  --bg: #121212;
+  --text: #f1f1f1;
+  --accent: #009dff;
+  --card: #1e1e1e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+.navbar {
+  background: var(--bg);
+  border-bottom: 1px solid #ccc;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+.nav-links a,
+#theme-toggle {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.hero {
+  text-align: center;
+  padding: 6rem 1rem;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  color: var(--accent);
+}
+
+.btn {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.7rem 1.4rem;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+  display: inline-block;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #005fcc;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--card);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+  .hero h2 {
+    font-size: 2rem;
+  }
+  .section h2 {
+    font-size: 1.6rem;
+  }
+}
