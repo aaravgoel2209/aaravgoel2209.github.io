@@ -3,73 +3,76 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aarav Goel — Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Aarav Goel | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
 <body>
-  <header class="navbar">
+  <header class="header">
     <div class="container">
-      <h1 class="logo">Aarav</h1>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><button id="theme-toggle">🌓</button></li>
-        </ul>
-      </nav>
+      <div class="profile-pic">
+        <!-- Replace src with your image -->
+        <img src="your-photo.jpg" alt="Aarav Goel" />
+      </div>
+      <div class="intro-text">
+        <h1>Aarav Goel</h1>
+        <p>Future NASA Software Engineer • CS50 Grad • AI Builder</p>
+      </div>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="container">
-      <h2>Hello, I'm <span class="highlight">Aarav</span></h2>
-      <p>A passionate student building real things with AI, code & creativity.</p>
-      <a href="#projects" class="btn">View My Work</a>
-    </div>
-  </section>
+  <nav class="navbar">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certificates">Certificates</a></li>
+      <li><a href="#skills">Skills</a></li>
+    </ul>
+  </nav>
 
   <section id="about" class="section">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>
-        I'm a student developer who builds projects that mix AI, design, and logic. I’ve worked on games, study apps, and simulations — always aiming for real-world impact.
-      </p>
-    </div>
+    <h2>About Me</h2>
+    <p>Hi, I'm Aarav — a passionate programmer building the future of AI, robotics, and web tech. From VEX to CS50x to cutting-edge study apps, I craft things that matter.</p>
   </section>
 
   <section id="projects" class="section">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="projects-grid">
-        <div class="card">
-          <h3>Roulette Reversal</h3>
-          <p>iPad-based casino game with real-time sync and custom UI.</p>
-        </div>
-        <div class="card">
-          <h3>NoteMate AI</h3>
-          <p>AI-powered note, quiz, and flashcard generator for students.</p>
-        </div>
-        <div class="card">
-          <h3>Wimbledon Predictor</h3>
-          <p>Full tournament simulation & prediction using ATP data + AI.</p>
-        </div>
+    <h2>Projects</h2>
+    <div class="cards">
+      <!-- Add project cards here -->
+      <div class="card">
+        <h3>NoteMate AI</h3>
+        <p>AI-powered study assistant that creates notes, flashcards & quizzes from any content.</p>
+      </div>
+      <div class="card">
+        <h3>Roulette Reversal</h3>
+        <p>Two-screen iPad/PC game that mixes luck, logic, and a twist of casino madness.</p>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="section">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <p>Reach out at <a href="mailto:aarav@example.com">aarav@example.com</a></p>
+  <section id="certificates" class="section">
+    <h2>Certificates</h2>
+    <div class="cards">
+      <div class="card">CS50x – HarvardX</div>
+      <div class="card">Python for AI – edX</div>
+      <!-- Add more certificates -->
     </div>
   </section>
 
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <ul class="skill-list">
+      <li>Python</li>
+      <li>Flask</li>
+      <li>JavaScript</li>
+      <li>HTML/CSS</li>
+      <li>AI/ML</li>
+      <li>Robotics</li>
+    </ul>
+  </section>
+
   <footer class="footer">
-    <div class="container">
-      <p>© 2025 Aarav Goel. All rights reserved.</p>
-    </div>
+    <p>&copy; 2025 Aarav Goel. All rights reserved.</p>
   </footer>
 </body>
 </html>
