@@ -1,14 +1,17 @@
-// Smooth scroll on nav click
-document.querySelectorAll(".navbar a").forEach(link => {
-  link.addEventListener("click", e => {
-    e.preventDefault();
-    const target = document.querySelector(link.getAttribute("href"));
-    target.scrollIntoView({ behavior: "smooth" });
+// Scroll reveal
+window.addEventListener("scroll", () => {
+  document.querySelectorAll(".grid-section, .section").forEach(el => {
+    if (el.getBoundingClientRect().top < window.innerHeight * 0.85) {
+      el.classList.add("show");
+    }
   });
 });
 
-// Contact form dummy message
-document.getElementById("contact-form").addEventListener("submit", function (e) {
-  e.preventDefault();
-  document.getElementById("form-msg").textContent = "Thanks! I will get back to you soon.";
+// Theme toggle
+document.getElementById("theme-toggle").addEventListener("click", () => {
+  const root = document.documentElement;
+  root.setAttribute(
+    "data-theme",
+    root.getAttribute("data-theme") === "light" ? "" : "light"
+  );
 });

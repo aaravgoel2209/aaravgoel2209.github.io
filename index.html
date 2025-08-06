@@ -1,69 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Portfolio</title>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aarav Goel | Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
   <script defer src="scripts.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header class="header">
-    <h1>Your Name</h1>
-    <nav class="navbar">
-      <a href="#about">About</a>
-      <a href="#certificates">Certificates</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <div class="logo">Aarav Goel</div>
+    <button id="theme-toggle" aria-label="toggle theme">🌓</button>
   </header>
 
   <section class="hero">
-    <div class="hero-content">
-      <img src="your-photo.jpg" alt="Your face" class="profile-pic" />
-      <h2>Welcome to my portfolio</h2>
-      <p>I'm a passionate developer, student, and builder of cool things.</p>
-    </div>
+    <img src="profile.jpg" alt="Aarav Goel" class="face" />
+    <h1>Hi I’m Aarav</h1>
+    <p>AI, Robotics & Full‑Stack Student Building for MIT</p>
   </section>
 
-  <section id="about" class="section">
-    <h2>About Me</h2>
-    <p>Write a strong introduction here about yourself, your skills, and your passion.</p>
-  </section>
-
-  <section id="certificates" class="section">
+  <section id="certificates" class="grid-section">
     <h2>Certificates</h2>
-    <div class="gallery">
-      <img src="cert1.jpg" alt="Certificate 1">
-      <img src="cert2.jpg" alt="Certificate 2">
-      <!-- Add more -->
+    <div class="grid certs">
+      <div class="card" data-label="Harvard CS50x">
+        <p>Harvard CS50x<br><small>August 2025</small></p>
+      </div>
+      <div class="card" data-label="Harvard CS50 AI">
+        <p>CS50 AI<br><small>Expected Oct 2025</small></p>
+      </div>
+      <!-- More certs -->
     </div>
   </section>
 
-  <section id="projects" class="section">
+  <section id="projects" class="grid-section">
     <h2>Projects</h2>
-    <div class="project">
-      <h3>Project Title</h3>
-      <p>Description of what it does, tech stack used, etc.</p>
-      <a href="#">View Project</a>
+    <div class="grid projects">
+      <div class="card">
+        <h3>NoteMate AI</h3>
+        <p>AI‑powered study suite: quizzes, notes & flashcards.</p>
+      </div>
+      <div class="card">
+        <h3>Roulette Reversal</h3>
+        <p>Interactive casino game with real‑time sync on multiple screens.</p>
+      </div>
+      <!-- More project cards -->
     </div>
-    <!-- More projects -->
   </section>
 
-  <section id="contact" class="section">
-    <h2>Contact Me</h2>
-    <form id="contact-form">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-    <p id="form-msg"></p>
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <div class="skills">
+      <span>Python</span><span>AI/ML</span><span>Flask</span><span>VEX Robotics</span><span>JavaScript</span>
+    </div>
   </section>
 
   <footer class="footer">
-    <p>&copy; 2025 Your Name. All rights reserved.</p>
+    <p>&copy; 2025 Aarav Goel</p>
   </footer>
 </body>
 </html>
