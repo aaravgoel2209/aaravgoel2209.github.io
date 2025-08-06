@@ -1,18 +1,14 @@
-// Simple animation on scroll
-window.addEventListener("scroll", () => {
-  const sections = document.querySelectorAll(".section");
-  const triggerBottom = window.innerHeight * 0.85;
-
-  sections.forEach((section) => {
-    const sectionTop = section.getBoundingClientRect().top;
-    if (sectionTop < triggerBottom) {
-      section.classList.add("show");
-    }
+// Smooth scroll on nav click
+document.querySelectorAll(".navbar a").forEach(link => {
+  link.addEventListener("click", e => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute("href"));
+    target.scrollIntoView({ behavior: "smooth" });
   });
 });
 
-// Fade-in effect
-document.addEventListener("DOMContentLoaded", () => {
-  const allSections = document.querySelectorAll(".section");
-  allSections.forEach((s) => s.classList.add("fade"));
+// Contact form dummy message
+document.getElementById("contact-form").addEventListener("submit", function (e) {
+  e.preventDefault();
+  document.getElementById("form-msg").textContent = "Thanks! I will get back to you soon.";
 });

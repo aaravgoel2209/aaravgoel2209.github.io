@@ -3,76 +3,67 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aarav Goel | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <title>Your Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="scripts.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header class="header">
-    <div class="container">
-      <div class="profile-pic">
-        <!-- Replace src with your image -->
-        <img src="your-photo.jpg" alt="Aarav Goel" />
-      </div>
-      <div class="intro-text">
-        <h1>Aarav Goel</h1>
-        <p>Future NASA Software Engineer • CS50 Grad • AI Builder</p>
-      </div>
-    </div>
+    <h1>Your Name</h1>
+    <nav class="navbar">
+      <a href="#about">About</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <nav class="navbar">
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#certificates">Certificates</a></li>
-      <li><a href="#skills">Skills</a></li>
-    </ul>
-  </nav>
+  <section class="hero">
+    <div class="hero-content">
+      <img src="your-photo.jpg" alt="Your face" class="profile-pic" />
+      <h2>Welcome to my portfolio</h2>
+      <p>I'm a passionate developer, student, and builder of cool things.</p>
+    </div>
+  </section>
 
   <section id="about" class="section">
     <h2>About Me</h2>
-    <p>Hi, I'm Aarav — a passionate programmer building the future of AI, robotics, and web tech. From VEX to CS50x to cutting-edge study apps, I craft things that matter.</p>
-  </section>
-
-  <section id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="cards">
-      <!-- Add project cards here -->
-      <div class="card">
-        <h3>NoteMate AI</h3>
-        <p>AI-powered study assistant that creates notes, flashcards & quizzes from any content.</p>
-      </div>
-      <div class="card">
-        <h3>Roulette Reversal</h3>
-        <p>Two-screen iPad/PC game that mixes luck, logic, and a twist of casino madness.</p>
-      </div>
-    </div>
+    <p>Write a strong introduction here about yourself, your skills, and your passion.</p>
   </section>
 
   <section id="certificates" class="section">
     <h2>Certificates</h2>
-    <div class="cards">
-      <div class="card">CS50x – HarvardX</div>
-      <div class="card">Python for AI – edX</div>
-      <!-- Add more certificates -->
+    <div class="gallery">
+      <img src="cert1.jpg" alt="Certificate 1">
+      <img src="cert2.jpg" alt="Certificate 2">
+      <!-- Add more -->
     </div>
   </section>
 
-  <section id="skills" class="section">
-    <h2>Skills</h2>
-    <ul class="skill-list">
-      <li>Python</li>
-      <li>Flask</li>
-      <li>JavaScript</li>
-      <li>HTML/CSS</li>
-      <li>AI/ML</li>
-      <li>Robotics</li>
-    </ul>
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Project Title</h3>
+      <p>Description of what it does, tech stack used, etc.</p>
+      <a href="#">View Project</a>
+    </div>
+    <!-- More projects -->
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <p id="form-msg"></p>
   </section>
 
   <footer class="footer">
-    <p>&copy; 2025 Aarav Goel. All rights reserved.</p>
+    <p>&copy; 2025 Your Name. All rights reserved.</p>
   </footer>
 </body>
 </html>
