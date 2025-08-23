@@ -1,60 +1,263 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Aarav Goel | Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <title>Aarav Goel — Portfolio</title>
+  <meta name="description" content="Aarav Goel — CS50x/CS50P in 7th grade, VEX RuiGuan programmer, co-owner of Smarter Dev (15k+), passionate about AI/ML." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
-  <script defer src="scripts.js"></script>
 </head>
 <body>
-  <header class="header">
-    <div class="logo">Aarav Goel</div>
-    <button id="theme-toggle" aria-label="toggle theme">🌓</button>
+  <!-- Decorative background -->
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="grid-noise"></div>
+
+  <header class="site-header">
+    <div class="container nav">
+      <div class="brand">
+        <span class="logo">AG</span>
+        <span class="brand-name">Aarav Goel</span>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#certs">Certifications</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#impact">Impact</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+        <span class="sun">☀</span><span class="moon">🌙</span>
+      </button>
+    </div>
   </header>
 
-  <section class="hero">
-    <img src="profile.jpg" alt="Aarav Goel" class="face" />
-    <h1>Hi I’m Aarav</h1>
-    <p>AI, Robotics & Full‑Stack Student Building for MIT</p>
-  </section>
-
-  <section id="certificates" class="grid-section">
-    <h2>Certificates</h2>
-    <div class="grid certs">
-      <div class="card" data-label="Harvard CS50x">
-        <p>Harvard CS50x<br><small>August 2025</small></p>
+  <main>
+    <!-- HERO -->
+    <section class="hero container" id="top">
+      <div class="hero-text">
+        <h1 class="headline">
+          <span class="hi">Hi, I’m</span>
+          <span class="name">Aarav Goel</span>
+          <span class="typed" aria-live="polite"></span>
+        </h1>
+        <p class="kicker">
+          7th-grade finisher of <strong>CS50x</strong> and <strong>CS50P</strong>, programmer on the <strong>RuiGuan VEX</strong> team, and co-owner of
+          <strong>Smarter Dev</strong> (15,000+ members). I build thoughtful software and love <strong>AI/ML</strong>, robotics, and elegant code.
+        </p>
+        <div class="cta-row">
+          <a class="btn primary" href="#projects">See Projects</a>
+          <a class="btn ghost" href="#certs">View Certifications</a>
+        </div>
+        <div class="stats">
+          <div class="stat">
+            <span class="num" data-target="15000">0</span>
+            <span class="label">Community Members</span>
+          </div>
+          <div class="stat">
+            <span class="num" data-target="2">0</span>
+            <span class="label">Harvard CS Certificates</span>
+          </div>
+          <div class="stat">
+            <span class="num" data-target="1">0</span>
+            <span class="label">VEX Programmer Role</span>
+          </div>
+        </div>
       </div>
-      <div class="card" data-label="Harvard CS50 AI">
-        <p>CS50 AI<br><small>Expected Oct 2025</small></p>
+      <div class="hero-art">
+        <div class="card3d" data-tilt>
+          <div class="pfp-glass">
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1000&auto=format&fit=crop" alt="Aarav portrait placeholder" />
+          </div>
+          <div class="badge-row">
+            <span class="badge">AI/ML</span>
+            <span class="badge">Robotics</span>
+            <span class="badge">Python</span>
+          </div>
+        </div>
       </div>
-      <!-- More certs -->
-    </div>
-  </section>
+    </section>
 
-  <section id="projects" class="grid-section">
-    <h2>Projects</h2>
-    <div class="grid projects">
-      <div class="card">
-        <h3>NoteMate AI</h3>
-        <p>AI‑powered study suite: quizzes, notes & flashcards.</p>
+    <!-- ABOUT -->
+    <section id="about" class="section container reveal">
+      <div class="section-head">
+        <h2>About</h2>
+        <p>Focused, curious, and relentless about learning. I thrive where code meets creativity: algorithms that move robots, models that learn, and interfaces that make ideas feel inevitable.</p>
       </div>
-      <div class="card">
-        <h3>Roulette Reversal</h3>
-        <p>Interactive casino game with real‑time sync on multiple screens.</p>
+      <div class="about-grid">
+        <div class="about-card glass">
+          <h3>RuiGuan VEX Programmer</h3>
+          <p>RuiGuan is one of the most successful VEX teams—my role is programming autonomous routines, control systems, and match-ready reliability.</p>
+        </div>
+        <div class="about-card glass">
+          <h3>CS50x & CS50P (7th Grade)</h3>
+          <p>Completed Harvard’s foundational CS courses early, developing strong problem-solving skills across C, Python, web, and algorithms.</p>
+        </div>
+        <div class="about-card glass">
+          <h3>Smarter Dev Co‑Owner</h3>
+          <p>Grew a developer community to 15,000+ members, running events and mentorship while building tools that help people learn the craft.</p>
+        </div>
       </div>
-      <!-- More project cards -->
-    </div>
-  </section>
+    </section>
 
-  <section id="skills" class="section">
-    <h2>Skills</h2>
-    <div class="skills">
-      <span>Python</span><span>AI/ML</span><span>Flask</span><span>VEX Robotics</span><span>JavaScript</span>
-    </div>
-  </section>
+    <!-- CERTIFICATIONS -->
+    <section id="certs" class="section container reveal">
+      <div class="section-head">
+        <h2>Certifications</h2>
+        <p>Drop your certificate images here — click to view full size.</p>
+      </div>
+      <div class="certs-grid" id="certsGrid">
+        <!-- Replace the sample images with your actual certificate PNG/JPG files -->
+        <figure class="cert">
+          <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?q=80&w=1200&auto=format&fit=crop" alt="CS50x Certificate placeholder" />
+          <figcaption>CS50x</figcaption>
+        </figure>
+        <figure class="cert">
+          <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?q=80&w=1200&auto=format&fit=crop" alt="CS50P Certificate placeholder" />
+          <figcaption>CS50P</figcaption>
+        </figure>
+      </div>
+      <!-- Modal -->
+      <dialog id="lightbox">
+        <img alt="Certificate full view" id="lightboxImg" />
+        <button class="close" id="closeLightbox" aria-label="Close">×</button>
+      </dialog>
+    </section>
 
-  <footer class="footer">
-    <p>&copy; 2025 Aarav Goel</p>
+    <!-- SKILLS -->
+    <section id="skills" class="section container reveal">
+      <div class="section-head">
+        <h2>Skills</h2>
+        <p>Click a tag to filter projects. Click again to clear.</p>
+      </div>
+      <div class="tags" id="skillTags">
+        <button class="tag" data-skill="python">Python</button>
+        <button class="tag" data-skill="ai-ml">AI/ML</button>
+        <button class="tag" data-skill="flask">Flask</button>
+        <button class="tag" data-skill="robotics">Robotics</button>
+        <button class="tag" data-skill="vision">Computer Vision</button>
+        <button class="tag" data-skill="algorithms">Algorithms</button>
+        <button class="tag" data-skill="web">Web</button>
+        <button class="tag" data-skill="community">Community</button>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section container reveal">
+      <div class="section-head">
+        <h2>Projects</h2>
+        <p>Selected builds that show depth, curiosity, and craft. Add more as you go.</p>
+      </div>
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Project Card Template -->
+        <article class="project-card" data-skills="python ai-ml algorithms">
+          <div class="project-media">
+            <img src="https://images.unsplash.com/photo-1555252586-d78a9db1af1a?q=80&w=1200&auto=format&fit=crop" alt="AI Maze Solver UI placeholder">
+          </div>
+          <div class="project-body">
+            <h3>AI Maze Solver</h3>
+            <p>Interactive web app visualizing search algorithms (A*, DFS) navigating mazes with real-time pathfinding and metrics.</p>
+            <div class="stack">
+              <span>Python</span><span>JS</span><span>Algorithms</span>
+            </div>
+            <div class="actions">
+              <a href="#" class="btn tiny">Demo</a>
+              <a href="#" class="btn tiny ghost">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-skills="robotics algorithms python">
+          <div class="project-media">
+            <img src="https://images.unsplash.com/photo-1542317853-c25297854d58?q=80&w=1200&auto=format&fit=crop" alt="VEX autonomous routines placeholder">
+          </div>
+          <div class="project-body">
+            <h3>RuiGuan VEX Autonomous</h3>
+            <p>Reliable autonomous routines with motion profiling, PID control, and match-optimized sequencing.</p>
+            <div class="stack">
+              <span>Robotics</span><span>Control</span><span>Python/C++</span>
+            </div>
+            <div class="actions">
+              <a href="#" class="btn tiny">Video</a>
+              <a href="#" class="btn tiny ghost">Write‑up</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-skills="web community python">
+          <div class="project-media">
+            <img src="https://images.unsplash.com/photo-1553481187-be93c21490a9?q=80&w=1200&auto=format&fit=crop" alt="Smarter Dev community tools placeholder">
+          </div>
+          <div class="project-body">
+            <h3>Smarter Dev Tools</h3>
+            <p>Moderation and analytics bots, onboarding flows, and a resources hub to scale a 15k+ developer community.</p>
+            <div class="stack">
+              <span>Discord</span><span>Automation</span><span>Python</span>
+            </div>
+            <div class="actions">
+              <a href="#" class="btn tiny">Overview</a>
+              <a href="#" class="btn tiny ghost">Docs</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- IMPACT / RECOGNITION -->
+    <section id="impact" class="section container reveal">
+      <div class="section-head">
+        <h2>Impact & Recognition</h2>
+        <p>Moments that show leadership, rigor, and community building.</p>
+      </div>
+      <div class="impact-grid">
+        <div class="impact-card glass">
+          <h3>RuiGuan VEX</h3>
+          <p>Programmer for a top-performing VEX team, shipping autonomous systems that win under pressure.</p>
+        </div>
+        <div class="impact-card glass">
+          <h3>Smarter Dev</h3>
+          <p>Co-led a 15k+ Discord dev community with mentoring, events, and open-source resources.</p>
+        </div>
+        <div class="impact-card glass">
+          <h3>Early CS Mastery</h3>
+          <p>Completed CS50x & CS50P in 7th grade; building AI/ML and robotics projects beyond the classroom.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section container reveal">
+      <div class="section-head">
+        <h2>Contact</h2>
+        <p>Opportunities, collaborations, or cool problems to solve — let’s talk.</p>
+      </div>
+      <form class="contact glass" name="contact">
+        <div class="row">
+          <label> Name
+            <input required type="text" name="name" placeholder="Your name">
+          </label>
+          <label> Email
+            <input required type="email" name="email" placeholder="you@example.com">
+          </label>
+        </div>
+        <label> Message
+          <textarea required name="message" rows="5" placeholder="What shall we build?"></textarea>
+        </label>
+        <button class="btn primary" type="submit">Send</button>
+        <p class="form-msg" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <p>© <span id="year"></span> Aarav Goel — Built with care and curiosity.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
