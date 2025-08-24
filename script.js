@@ -7,7 +7,7 @@ const roles = [
   'AI/ML • Robotics • Algorithms',
   'VEX Programmer @ RuiGuan',
   'CS50x & CS50P (7th Grade)',
-  'Co‑owner — Smarter Dev (15k+)'
+  'Mentored and Teached 10k + members Python and ML'
 ];
 let rIndex = 0, charIndex = 0, deleting = false;
 
