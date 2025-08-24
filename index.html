@@ -25,10 +25,12 @@
       </div>
       <nav>
         <a href="#about">About</a>
+        <a href="#academics">Academics</a>
         <a href="#certs">Certifications</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#impact">Impact</a>
+        <a href="#elsewhere">Elsewhere</a>
         <a href="#contact">Contact</a>
       </nav>
       <button id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
@@ -47,12 +49,12 @@
           <span class="typed" aria-live="polite"></span>
         </h1>
         <p class="kicker">
-          7th-grade finisher of <strong>CS50x</strong> and <strong>CS50P</strong>, programmer on the <strong>RuiGuan VEX</strong> team, and co-owner of
+          7th-grade finisher of <strong>CS50x</strong> and <strong>CS50P</strong>, core programmer on the <strong>RuiGuan VEX</strong> team, and co-owner of
           <strong>Smarter Dev</strong> (15,000+ members). I build thoughtful software and love <strong>AI/ML</strong>, robotics, and elegant code.
         </p>
         <div class="cta-row">
           <a class="btn primary" href="#projects">See Projects</a>
-          <a class="btn ghost" href="#certs">View Certifications</a>
+          <button class="btn ghost" data-open="certsModal">View Certifications</button>
         </div>
         <div class="stats">
           <div class="stat">
@@ -64,8 +66,8 @@
             <span class="label">Harvard CS Certificates</span>
           </div>
           <div class="stat">
-            <span class="num" data-target="1">0</span>
-            <span class="label">VEX Programmer Role</span>
+            <span class="num" data-target="6">0</span>
+            <span class="label">Robotics Systems Shipped</span>
           </div>
         </div>
       </div>
@@ -91,16 +93,47 @@
       </div>
       <div class="about-grid">
         <div class="about-card glass">
-          <h3>RuiGuan VEX Programmer</h3>
-          <p>RuiGuan is one of the most successful VEX teams—my role is programming autonomous routines, control systems, and match-ready reliability.</p>
+          <h3>RuiGuan VEX — Programming Lead</h3>
+          <p>RuiGuan is one of the most successful VEX teams—my work focuses on autonomous routines, control systems, reliability, and rapid iteration for competition.</p>
         </div>
         <div class="about-card glass">
           <h3>CS50x & CS50P (7th Grade)</h3>
           <p>Completed Harvard’s foundational CS courses early, developing strong problem-solving skills across C, Python, web, and algorithms.</p>
         </div>
         <div class="about-card glass">
-          <h3>Smarter Dev Co‑Owner</h3>
-          <p>Mentored and teached python and ml in a community of over 15k members</p>
+          <h3>Smarter Dev Co-Owner</h3>
+          <p>Grew a developer community to 15,000+ members, running events and mentorship while building tools that help people learn the craft.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACADEMICS -->
+    <section id="academics" class="section container reveal">
+      <div class="section-head">
+        <h2>Academics</h2>
+        <p>Highlights that show rigor, curiosity, and momentum.</p>
+      </div>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="dot"></div>
+          <div class="tl-card glass">
+            <h3>Harvard CS50x & CS50P</h3>
+            <p>Completed in 7th grade; built multiple problem sets and final projects emphasizing algorithms, data structures, and web.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="dot"></div>
+          <div class="tl-card glass">
+            <h3>VEX Robotics — Programming Lead</h3>
+            <p>Autonomous routines, motion profiling, PID control, and match-readiness under constraints.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="dot"></div>
+          <div class="tl-card glass">
+            <h3>Independent AI/ML Study</h3>
+            <p>Exploring computer vision, reinforcement learning basics, and practical model deployment for small projects.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -109,10 +142,9 @@
     <section id="certs" class="section container reveal">
       <div class="section-head">
         <h2>Certifications</h2>
-        <p>Click to view full size</p>
+        <p>Click to view full size — open the full gallery for a large collection.</p>
       </div>
       <div class="certs-grid" id="certsGrid">
-        <!-- Replace the sample images with your actual certificate PNG/JPG files -->
         <figure class="cert">
           <img src="images/cert1.png" alt="CS50x Certificate" />
           <figcaption>CS50x</figcaption>
@@ -122,7 +154,14 @@
           <figcaption>CS50P</figcaption>
         </figure>
       </div>
-      <!-- Modal -->
+      <div class="certs-actions">
+        <button class="btn primary" data-open="certsModal">Open Gallery</button>
+        <label class="btn ghost file-label">
+          Add Images
+          <input type="file" id="certsInput" accept="image/*" multiple hidden />
+        </label>
+      </div>
+      <!-- Lightbox -->
       <dialog id="lightbox">
         <img alt="Certificate full view" id="lightboxImg" />
         <button class="close" id="closeLightbox" aria-label="Close">×</button>
@@ -151,10 +190,9 @@
     <section id="projects" class="section container reveal">
       <div class="section-head">
         <h2>Projects</h2>
-        <p>Selected builds that show depth, curiosity, and craft. Add more as you go.</p>
+        <p>Selected builds that show depth, curiosity, and craft. Explore the full list for GitHub projects.</p>
       </div>
       <div class="projects-grid" id="projectsGrid">
-        <!-- Project Card Template -->
         <article class="project-card" data-skills="python ai-ml algorithms">
           <div class="project-media">
             <img src="https://images.unsplash.com/photo-1555252586-d78a9db1af1a?q=80&w=1200&auto=format&fit=crop" alt="AI Maze Solver UI placeholder">
@@ -168,6 +206,7 @@
             <div class="actions">
               <a href="#" class="btn tiny">Demo</a>
               <a href="#" class="btn tiny ghost">Code</a>
+              <button class="btn tiny" data-open="projectsModal">All Projects</button>
             </div>
           </div>
         </article>
@@ -184,7 +223,8 @@
             </div>
             <div class="actions">
               <a href="#" class="btn tiny">Video</a>
-              <a href="#" class="btn tiny ghost">Write‑up</a>
+              <a href="#" class="btn tiny ghost">Write-up</a>
+              <button class="btn tiny" data-open="projectsModal">All Projects</button>
             </div>
           </div>
         </article>
@@ -202,9 +242,13 @@
             <div class="actions">
               <a href="#" class="btn tiny">Overview</a>
               <a href="#" class="btn tiny ghost">Docs</a>
+              <button class="btn tiny" data-open="projectsModal">All Projects</button>
             </div>
           </div>
         </article>
+      </div>
+      <div class="section-actions">
+        <button class="btn primary" data-open="projectsModal">Open Full Project Library</button>
       </div>
     </section>
 
@@ -217,7 +261,7 @@
       <div class="impact-grid">
         <div class="impact-card glass">
           <h3>RuiGuan VEX</h3>
-          <p>Programmer for a top-performing VEX team, shipping autonomous systems that win under pressure.</p>
+          <p>Programming lead for a top-performing team, shipping autonomous systems that win under pressure.</p>
         </div>
         <div class="impact-card glass">
           <h3>Smarter Dev</h3>
@@ -230,13 +274,51 @@
       </div>
     </section>
 
+    <!-- ELSEWHERE / LINKS -->
+    <section id="elsewhere" class="section container reveal">
+      <div class="section-head">
+        <h2>Elsewhere</h2>
+        <p>Find me around the web.</p>
+      </div>
+      <div class="link-grid">
+        <a class="link-card glass" href="#" target="_blank" rel="noopener">
+          <div class="link-emoji">📝</div>
+          <div>
+            <h3>Blog</h3>
+            <p>Essays, build logs, and experiments.</p>
+          </div>
+        </a>
+        <a class="link-card glass" href="https://github.com/" target="_blank" rel="noopener">
+          <div class="link-emoji">🐙</div>
+          <div>
+            <h3>GitHub</h3>
+            <p>Code, issues, and stars.</p>
+          </div>
+        </a>
+        <a class="link-card glass" href="#" target="_blank" rel="noopener">
+          <div class="link-emoji">🤖</div>
+          <div>
+            <h3>RuiGuan VEX</h3>
+            <p>Team page & videos.</p>
+          </div>
+        </a>
+        <a class="link-card glass" href="#" target="_blank" rel="noopener">
+          <div class="link-emoji">💬</div>
+          <div>
+            <h3>Smarter Dev</h3>
+            <p>Community invite.</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
     <!-- CONTACT -->
     <section id="contact" class="section container reveal">
       <div class="section-head">
         <h2>Contact</h2>
         <p>Opportunities, collaborations, or cool problems to solve — let’s talk.</p>
       </div>
-      <form class="contact glass" name="contact">
+      <form class="contact contact-thick glass" name="contact">
         <div class="row">
           <label> Name
             <input required type="text" name="name" placeholder="Your name">
@@ -246,9 +328,9 @@
           </label>
         </div>
         <label> Message
-          <textarea required name="message" rows="5" placeholder="What shall we build?"></textarea>
+          <textarea required name="message" rows="6" placeholder="What shall we build?"></textarea>
         </label>
-        <button class="btn primary" type="submit">Send</button>
+        <button class="btn primary big" type="submit">Send Message</button>
         <p class="form-msg" aria-live="polite"></p>
       </form>
     </section>
@@ -257,6 +339,37 @@
   <footer class="site-footer container">
     <p>© <span id="year"></span> Aarav Goel — Built with care and curiosity.</p>
   </footer>
+
+  <!-- Projects Modal -->
+  <dialog id="projectsModal" class="modal">
+    <div class="modal-head">
+      <h3>Project Library</h3>
+      <button class="close" data-close>×</button>
+    </div>
+    <div class="modal-controls">
+      <input id="projSearch" type="search" placeholder="Search projects…" />
+      <select id="projSort">
+        <option value="updated">Sort: Recently updated</option>
+        <option value="stars">Sort: Most stars</option>
+        <option value="name">Sort: Name A→Z</option>
+      </select>
+      <input id="githubUser" type="text" placeholder="GitHub username (set me!)" />
+      <button id="fetchGitHub" class="btn tiny">Fetch GitHub</button>
+    </div>
+    <div id="projectsList" class="list-grid"></div>
+  </dialog>
+
+  <!-- Certifications Modal -->
+  <dialog id="certsModal" class="modal wide">
+    <div class="modal-head">
+      <h3>Certification Gallery</h3>
+      <button class="close" data-close>×</button>
+    </div>
+    <div class="modal-controls">
+      <input id="certSearch" type="search" placeholder="Search by name…" />
+    </div>
+    <div id="certsList" class="masonry"></div>
+  </dialog>
 
   <script src="script.js"></script>
 </body>
